@@ -2,7 +2,8 @@ import librosa
 import numpy as np
 
 
-def split_frame_by_data(frame_size: int, frame_shift, audio_data: np.array, sr: int) -> np.array:
+def split_frame_by_data(frame_size: any, frame_shift: any, audio_data: np.array,
+                        sr: int) -> np.array:
     """split frame by audio data(np.array)
 
     Args:
@@ -33,6 +34,7 @@ def split_frame_by_file(frame_size, frame_shift, audio_file: str) -> np.array:
 
     Returns:
         np.array: return a np.array of audio frames
+        sr: the sample rate used to split frame
     """
     audio_data, sr = librosa.load(audio_file)
-    return split_frame_by_data(frame_size, frame_shift, audio_data, sr)
+    return split_frame_by_data(frame_size, frame_shift, audio_data, sr), sr
