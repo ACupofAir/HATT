@@ -40,7 +40,10 @@ for class_name in class_directories:
         splited_frames, sr = split_frame_by_file(frame_size=5,
                                                  frame_shift=2.5,
                                                  audio_file=audio_file_path)
-        for frame in splited_frames:
+        print(
+            f'------------------------------convert {class_name}/{file_name} to audio------------------------------'
+        )
+        for frame in tqdm(splited_frames):
             saved_path = os.path.join(shipeat_img_dir, class_name, str(frame_idx) + '.png')
             frame_idx += 1
             audio2specfile(audio_data=frame, sr=sr, saved_path=saved_path)
