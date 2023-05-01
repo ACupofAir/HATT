@@ -1,8 +1,9 @@
 import os
 from tqdm import tqdm
 
-folder_path = '/home/june/workspace/CDTrans/data/shipsear/source/images/5'
-output_path = '/home/june/workspace/CDTrans/data/shipsear/source_list.txt'
+# ! [FIXME]
+folder_path = '/home/june/workspace/CDTrans/data/shipsear/target/images/tug'
+output_path = '/home/june/workspace/CDTrans/data/shipsear/target_list.txt'
 
 
 def generate_folder_file_label(folder_path: str, output_path: str, label: str = None) -> None:

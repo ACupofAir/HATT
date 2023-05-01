@@ -11,7 +11,9 @@ from utils import audio2specfile, split_frame_by_file
 config = configparser.ConfigParser()
 config.read('../config.ini')
 
-shipeat_directory = config.get('dataset', 'shipeat_directory')
+# ! [FIXME]: change to the dataset directory path you needed
+# shipeat_directory = config.get('dataset', 'shipeat_directory')
+shipeat_directory = config.get('dataset', 'shipsear_target')
 shipeat_audio_directory = os.path.join(shipeat_directory, 'audio_source')
 method = 'mel'
 
