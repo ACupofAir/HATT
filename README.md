@@ -12,7 +12,30 @@ hydroacoustic-transformer-transfer, using domain adpat based transformer to clas
 2. `split_img_folder.py`: split these small audio file folder to source and target folder
 
 ### example to create dataset for source and target
-* split frame: `split_frame.py` -> FIXME, change the directory in the file, and generate mel images folder after running this script
+* split frame
+    1. `config.ini`: config your source and target audio folder path. The directory structure should look like the following.
+        * `<datasetname>_audio_source`: the directory store audio files which will be convert to spectrograms
+        * `<datasetname>_directory`: the directory will store the spectrograms generate by the program
+        ```bash
+        DeepShip
+        └── DeepShip_audio
+            ├── Cargo
+            │   ├── 103.wav
+            │   ├── 110.wav
+            ├── Passengership
+            │   ├── 1.wav
+            │   ├── 12.wav
+            ├── Tanker
+            │   ├── 10.wav
+            │   ├── 12.wav
+            ...
+        ```
+    2. `split_frame.py` -> `FIXME`, change the directory and method in the file, and generate mel images folder after running this script
+    ```python
+    # run in HATT
+    cd data
+    python split_frame.py
+    ```
 * link the dataset to the cdtrans net
     ```bash
     ln -s /mnt/d/workspace/dataset/deepship_source/mel data/shipsear/source/images
