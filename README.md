@@ -30,7 +30,7 @@ hydroacoustic-transformer-transfer, using domain adpat based transformer to clas
             │   ├── 12.wav
             ...
         ```
-    2. `split_frame.py` -> `FIXME`, change the directory and method in the file, and generate mel images folder after running this script
+    2. `data/split_frame.py` -> `FIXME`, change the directory and method in the file, and generate mel images folder after running this script
     ```python
     # run in HATT
     cd data
@@ -42,7 +42,9 @@ hydroacoustic-transformer-transfer, using domain adpat based transformer to clas
     ln -s /mnt/d/workspace/dataset/shipears_target/mel data/shipsear/target/images
     ```
 * generate label list for dataset
-    * `generate_label.py` -> FIXME: change the folder_path, output_path
+    * `data/generate_label.py` -> FIXME: change the folder_path, output_path
+        * `folder_path`: should be the path which contains multi class directory
+        * `output_path`: should be  `data/source2target/<source/target>_list.txt`
     * run the `python generate_label.py` command in the `HATT/data` directory
 
 ### utils
