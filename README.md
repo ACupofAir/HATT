@@ -13,9 +13,9 @@ hydroacoustic-transformer-transfer, using domain adpat based transformer to clas
 
 ### example to create dataset for source and target
 * split frame
-    1. `config.ini`: config your source and target audio folder path. The directory structure should look like the following.
-        * `<datasetname>_audio_source`: the directory store audio files which will be convert to spectrograms
-        * `<datasetname>_directory`: the directory will store the spectrograms generate by the program
+    1. `data_config.json`: config your source and target audio folder path. The directory structure should look like the following.
+        * `directory`: the directory will store the spectrograms generate by the program
+        * `audio_path`: the directory store audio files which will be convert to spectrograms
         ```bash
         DeepShip
         └── DeepShip_audio

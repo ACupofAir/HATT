@@ -1,0 +1,14 @@
+{
+    "testdata": {
+        "directory": "/mnt/e/Datasets/TestDateset_BMCT/",
+        "audio_path": "/mnt/e/Datasets/TestDateset_BMCT/Testdata_audio"
+    },
+    "ShipsEar": {
+        "directory": "/mnt/e/Datasets/ShipsEar/",
+        "audio_path": "/mnt/e/Datasets/ShipsEar/ShipsEar_audio"
+    },
+    "DeepShip": {
+        "directory": "/mnt/e/Datasets/DeepShip/",
+        "audio_path": "/mnt/e/Datasets/DeepShip/DeepShip_audio"
+    }
+}
