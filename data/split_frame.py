@@ -9,11 +9,12 @@ sys.path.append("..")
 from spec_utils import audio2specfile, split_frame_by_file
 
 # * get all need split file name
-# ! [FIXME]: change to the name you needed
+# ! [FIXME]: change to the name you needed which should be a key value in data_config.json
+dataset_name = "ShipsEar"
 with open("../data_config.json", "r") as json_file:
     data = json.load(json_file)
-dataset_directory = data["testdata"]["directory"]
-dataset_audio_directory = data["testdata"]["audio_path"]
+dataset_directory = data[dataset_name]["directory"]
+dataset_audio_directory = data[dataset_name]["audio_path"]
 method = "mel"
 
 audio_class_names = os.listdir(dataset_audio_directory)
